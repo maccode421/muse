@@ -12,7 +12,7 @@ const configDB = require('./config/database.js');
 
 // Connect to Mongo
 mongoose
-  .connect(configDB.mongoURI)
+  .connect(configDB.mongoURI, { useNewUrlParser: true })
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
